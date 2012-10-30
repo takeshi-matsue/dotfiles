@@ -17,11 +17,11 @@ set showcmd                      " コマンドをステータス行に表示
 set showmode                     " 現在のモードを表示
 set viminfo='50,<1000,s100,\"50  " viminfoファイルの設定
 set modelines=0                  " モードラインは無効
-set number
-
-set hlsearch   " 検索時に、ヒットした単語をハイライトする設定
-set incsearch "インクリメンタルサーチを行う
-set ignorecase " 検索時に大文字小文字を区別しない
+set number                       " 行番号を表示する
+set whichwrap=b,s,h,l,<,>,[,]    "カーソルを行頭、行末で止まらないようにする
+set hlsearch                     " 検索時に、ヒットした単語をハイライトする設定
+set incsearch                    "インクリメンタルサーチを行う
+set ignorecase                   " 検索時に大文字小文字を区別しない
 set encoding=utf-8
 set termencoding=utf-8
 set fileencodings=utf-8,cp932,euc-jp
@@ -33,8 +33,7 @@ if has("syntax")
 endif
 
 "閉じ括弧が入力されたとき、対応する括弧を表示する
-set showmatch
-
+set showmatch 
 
 " OSのクリップボードを使用する
 set clipboard+=unnamed
@@ -43,8 +42,6 @@ set mouse=a
 set guioptions+=a
 set ttymouse=xterm2
 
-"ヤンクした文字は、システムのクリップボードに入れる"
-set clipboard=unnamed
 " 挿入モードでCtrl+kを押すとクリップボードの内容を貼り付けられるようにする "
 imap <C-p>  <ESC>"*pa
 
