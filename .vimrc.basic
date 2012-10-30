@@ -17,8 +17,16 @@ set showcmd                      " コマンドをステータス行に表示
 set showmode                     " 現在のモードを表示
 set viminfo='50,<1000,s100,\"50  " viminfoファイルの設定
 set modelines=0                  " モードラインは無効
-
 set number
+
+set hlsearch   " 検索時に、ヒットした単語をハイライトする設定
+set incsearch "インクリメンタルサーチを行う
+set ignorecase " 検索時に大文字小文字を区別しない
+set encoding=utf-8
+set termencoding=utf-8
+set fileencodings=utf-8,cp932,euc-jp
+set fileformat=unix
+
 "シンタックスハイライトを有効にする
 if has("syntax")
   syntax on
