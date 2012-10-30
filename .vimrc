@@ -2,6 +2,11 @@
 source ~/dotfiles/.vimrc.basic
 " ステータスライン
 source ~/dotfiles/.vimrc.statusline
+" bundle系の設定ファイル
+source ~/dotfiles/.vimrc.bundle_setting
+
+source ~/dotfiles/.vimrc.colors
+source ~/dotfiles/.vimrc.apperance
 
 "ステータスラインを常に表示
 " set laststatus=2
@@ -17,3 +22,5 @@ call vundle#rc()
 filetype plugin on
 
 Bundle "Shougo/neocomplcache"
+Bundle "Shougo/unite.vim"
+Bundle "Lokaltog/vim-powerline"

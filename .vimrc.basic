@@ -18,7 +18,17 @@ set showmode                     " 現在のモードを表示
 set viminfo='50,<1000,s100,\"50  " viminfoファイルの設定
 set modelines=0                  " モードラインは無効
 
-"" OSのクリップボードを使用する
+set number
+"シンタックスハイライトを有効にする
+if has("syntax")
+  syntax on
+endif
+
+"閉じ括弧が入力されたとき、対応する括弧を表示する
+set showmatch
+
+
+" OSのクリップボードを使用する
 set clipboard+=unnamed
 " ターミナルでマウスを使用できるようにする
 set mouse=a
