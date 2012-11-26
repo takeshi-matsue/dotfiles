@@ -1,64 +1,39 @@
-# LANG
-export LANG=ja_JP.UTF-8
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/dotfiles/.oh-my-zsh
 
-autoload -U compinit
-compinit
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="muse"
 
-# 移動したディレクトリを記録しておく
-setopt auto_pushd
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# キーバインドをvi
-bindkey -v
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-# 補完候補が複数ある時に一覧を表示する
-setopt auto_list
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-# 保管結果を詰める
-setopt list_packed
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-# Tabで順に補完候補を自動で補完する
-setopt auto_menu
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# カッコなどを自動的に補完する
-setopt auto_param_keys
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
 
-# ディレクトリ名の補完で末尾のスラッシュを付加して次の補完に備える
-setopt auto_param_slash
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
 
-# 自動修正機能を有効
-setopt correct
+source $ZSH/oh-my-zsh.sh
 
-# 音鳴らさない
-setopt nolistbeep
-
-# 色
-#export LSCOLORS=exfxcxdxbxegedabagacad
-#export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-export CLICOLOR=1
-export LSCOLORS=DxGxcxdxCxegedabagacad
-
-alias ls="ls -G"
-alias gls="gls --color"
-
-zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-
-
-# ヒストリ拡張
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-setopt hist_ignore_dups     # ignore duplication command history list
-setopt share_history        # share command history data
-
-# エイリアス
-alias ls='ls -hG'
-alias ll='ls -l'
-alias la='ls -a'
-alias cp='cp -iv'
-alias rm='rm -iv'
-alias mv='mv -iv'
-alias grep='grep --color=auto'
-alias less='lv'
-
-# 追加ファイル
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+# Customize to your needs...
+source $HOME/dotfiles/.zshrc.original
+source $HOME/dotfiles/git-completion.bash

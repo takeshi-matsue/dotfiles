@@ -22,6 +22,7 @@ call vundle#rc()
 filetype plugin on
 
 Bundle "Shougo/neocomplcache"
-Bundle "Shougo/unite.vim"
+"Bundle "Shougo/unite.vim"
 Bundle "Lokaltog/vim-powerline"
 Bundle "scrooloose/nerdtree"
+Bundle "gtags.vim"
