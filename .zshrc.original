@@ -31,6 +31,9 @@ setopt correct
 # 音鳴らさない
 setopt nolistbeep
 
+# ヒストリを呼び出してから実行する間に一旦編集できる状態になる
+setopt hist_verify
+ 
 # 色
 #export LSCOLORS=exfxcxdxbxegedabagacad
 #export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
@@ -47,8 +50,16 @@ setopt nolistbeep
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+# ヒストリを重複させない
 setopt hist_ignore_dups     # ignore duplication command history list
+# ヒストリを共有する
 setopt share_history        # share command history data
+
+# 履歴検索
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^P" history-beginning-search-backward-end
 
 # エイリアス
 #alias ls='ls -hG'

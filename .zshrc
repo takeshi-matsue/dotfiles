@@ -35,6 +35,13 @@ export LANG=ja_JP.UTF-8
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+# プロンプトの設定
+autoload colors
+colors
+PROMPT="%{${fg[green]}%}[%n@%m] %(!.#.$) %{${reset_color}%}"
+PROMPT2="%{${fg[green]}%}%_> %{${reset_color}%}"
+SPROMPT="%{${fg[red]}%}correct: %R -> %r [nyae]? %{${reset_color}%}"
+RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
