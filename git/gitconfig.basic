@@ -1,0 +1,21 @@
+[include]
+    path = .gitconfig.local
+[color]
+    ui = auto
+[core]
+    pager = lv -c
+    autocrlf = input
+    editor = /usr/local/bin/vim
+    excludesfile = $HOME/dotfiles/git/gitignore.local
+
+[alias]
+    co = checkout
+    st = status
+    ci = commit -a
+    di = diff
+    br = branch
+    wh = whatchanged
+    stat = log --stat --summary
+    logg = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
+    logs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --stat
+
