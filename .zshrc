@@ -46,4 +46,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 source $HOME/dotfiles/.zshrc.original
-source $HOME/dotfiles/git-completion.bash
+source $HOME/dotfiles/git/git-completion.bash
