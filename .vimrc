@@ -26,3 +26,5 @@ Bundle "Shougo/unite.vim"
 Bundle "Lokaltog/vim-powerline"
 Bundle "scrooloose/nerdtree"
 Bundle "gtags.vim"
+" Coffee Script
+Bundle 'kchmck/vim-coffee-script'
