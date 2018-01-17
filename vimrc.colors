@@ -1,0 +1,11 @@
+"-------------------------------------------------------------------------------
+" カラー関連 Colors
+"-------------------------------------------------------------------------------
+colorscheme molokai
+
+" ターミナルタイプによるカラー設定
+if &term =~ "xterm-256color" || "screen-256color"
+    colorscheme molokai
+    hi Comment ctermfg=102
+    hi Visual  ctermbg=236
+endif
